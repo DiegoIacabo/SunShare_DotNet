@@ -1,0 +1,747 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\PICHAU\\Downloads\\BigML_Dataset_5f50a4cc0d052e40e6000034.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Day of Year",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Year",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Month",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Day",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "First Hour of Period",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Is Daylight",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Boolean",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Distance to Solar Noon",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Average Temperature (Day)",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Average Wind Direction (Day)",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Average Wind Speed (Day)",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Sky Cover",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Visibility",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Relative Humidity",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Average Wind Speed (Period)",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Average Barometric Pressure (Period)",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Power Generated",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.90240616911990834,
+        "RuntimeInSeconds": 0.234,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Is Daylight"
+            ],
+            "InputColumnNames": [
+              "Is Daylight"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ],
+            "InputColumnNames": [
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "Is Daylight",
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfTrees": 9,
+            "NumberOfLeaves": 19,
+            "FeatureFraction": 0.9048345,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.89971054157227159,
+        "RuntimeInSeconds": 0.768,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Is Daylight"
+            ],
+            "InputColumnNames": [
+              "Is Daylight"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ],
+            "InputColumnNames": [
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "Is Daylight",
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.89971054157227159,
+        "RuntimeInSeconds": 0.201,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Is Daylight"
+            ],
+            "InputColumnNames": [
+              "Is Daylight"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ],
+            "InputColumnNames": [
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "Is Daylight",
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.86985629025989508,
+        "RuntimeInSeconds": 0.262,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "Is Daylight"
+            ],
+            "InputColumnNames": [
+              "Is Daylight"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ],
+            "InputColumnNames": [
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "Is Daylight",
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.278982058206413,
+        "RuntimeInSeconds": 0.196,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "Is Daylight"
+            ],
+            "InputColumnNames": [
+              "Is Daylight"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ],
+            "InputColumnNames": [
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "Is Daylight",
+              "Day of Year",
+              "Year",
+              "Month",
+              "Day",
+              "First Hour of Period",
+              "Distance to Solar Noon",
+              "Average Temperature (Day)",
+              "Average Wind Direction (Day)",
+              "Average Wind Speed (Day)",
+              "Sky Cover",
+              "Visibility",
+              "Relative Humidity",
+              "Average Wind Speed (Period)",
+              "Average Barometric Pressure (Period)"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Power Generated",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "OneHotEncoding",
+      "e1": "ReplaceMissingValues",
+      "e2": "Concatenate",
+      "e3": "FastTreeRegression",
+      "e4": "FastForestRegression",
+      "e5": "LightGbmRegression",
+      "e6": "LbfgsPoissonRegressionRegression",
+      "e7": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "C:\\Users\\PICHAU\\source\\repos\\SunShare\\SunShare.Services\\MLSolarPowerPrediction\\SolarPowerPrediction.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 1,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 10,
+    "LabelColumn": "Power Generated",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}

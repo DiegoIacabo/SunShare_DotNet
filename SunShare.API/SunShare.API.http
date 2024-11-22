@@ -1,0 +1,6 @@
+@SunShare.API_HostAddress = http://localhost:5189
+
+GET {{SunShare.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
