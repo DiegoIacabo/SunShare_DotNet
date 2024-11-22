@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ML.Data;
-using Microsoft.ML.Trainers.FastTree;
+//using Microsoft.ML.Trainers.FastTree;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms;
 using Microsoft.ML;
@@ -92,10 +92,10 @@ namespace SunShare_Services
         public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations
-            var pipeline = mlContext.Transforms.Categorical.OneHotEncoding(@"Is Daylight", @"Is Daylight", outputKind: OneHotEncodingEstimator.OutputKind.Indicator)      
-                                    .Append(mlContext.Transforms.ReplaceMissingValues(new []{new InputOutputColumnPair(@"Day of Year", @"Day of Year"),new InputOutputColumnPair(@"Year", @"Year"),new InputOutputColumnPair(@"Month", @"Month"),new InputOutputColumnPair(@"Day", @"Day"),new InputOutputColumnPair(@"First Hour of Period", @"First Hour of Period"),new InputOutputColumnPair(@"Distance to Solar Noon", @"Distance to Solar Noon"),new InputOutputColumnPair(@"Average Temperature (Day)", @"Average Temperature (Day)"),new InputOutputColumnPair(@"Average Wind Direction (Day)", @"Average Wind Direction (Day)"),new InputOutputColumnPair(@"Average Wind Speed (Day)", @"Average Wind Speed (Day)"),new InputOutputColumnPair(@"Sky Cover", @"Sky Cover"),new InputOutputColumnPair(@"Visibility", @"Visibility"),new InputOutputColumnPair(@"Relative Humidity", @"Relative Humidity"),new InputOutputColumnPair(@"Average Wind Speed (Period)", @"Average Wind Speed (Period)"),new InputOutputColumnPair(@"Average Barometric Pressure (Period)", @"Average Barometric Pressure (Period)")}))      
-                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"Is Daylight",@"Day of Year",@"Year",@"Month",@"Day",@"First Hour of Period",@"Distance to Solar Noon",@"Average Temperature (Day)",@"Average Wind Direction (Day)",@"Average Wind Speed (Day)",@"Sky Cover",@"Visibility",@"Relative Humidity",@"Average Wind Speed (Period)",@"Average Barometric Pressure (Period)"}))      
-                                    .Append(mlContext.Regression.Trainers.FastForest(new FastForestRegressionTrainer.Options(){NumberOfTrees=9,NumberOfLeaves=19,FeatureFraction=0.9048345F,LabelColumnName=@"Power Generated",FeatureColumnName=@"Features"}));
+            var pipeline = mlContext.Transforms.Categorical.OneHotEncoding(@"Is Daylight", @"Is Daylight", outputKind: OneHotEncodingEstimator.OutputKind.Indicator)
+                                    .Append(mlContext.Transforms.ReplaceMissingValues(new[] { new InputOutputColumnPair(@"Day of Year", @"Day of Year"), new InputOutputColumnPair(@"Year", @"Year"), new InputOutputColumnPair(@"Month", @"Month"), new InputOutputColumnPair(@"Day", @"Day"), new InputOutputColumnPair(@"First Hour of Period", @"First Hour of Period"), new InputOutputColumnPair(@"Distance to Solar Noon", @"Distance to Solar Noon"), new InputOutputColumnPair(@"Average Temperature (Day)", @"Average Temperature (Day)"), new InputOutputColumnPair(@"Average Wind Direction (Day)", @"Average Wind Direction (Day)"), new InputOutputColumnPair(@"Average Wind Speed (Day)", @"Average Wind Speed (Day)"), new InputOutputColumnPair(@"Sky Cover", @"Sky Cover"), new InputOutputColumnPair(@"Visibility", @"Visibility"), new InputOutputColumnPair(@"Relative Humidity", @"Relative Humidity"), new InputOutputColumnPair(@"Average Wind Speed (Period)", @"Average Wind Speed (Period)"), new InputOutputColumnPair(@"Average Barometric Pressure (Period)", @"Average Barometric Pressure (Period)") }))
+                                    .Append(mlContext.Transforms.Concatenate(@"Features", new[] { @"Is Daylight", @"Day of Year", @"Year", @"Month", @"Day", @"First Hour of Period", @"Distance to Solar Noon", @"Average Temperature (Day)", @"Average Wind Direction (Day)", @"Average Wind Speed (Day)", @"Sky Cover", @"Visibility", @"Relative Humidity", @"Average Wind Speed (Period)", @"Average Barometric Pressure (Period)" }));      
+                                    //.Append(mlContext.Regression.Trainers.FastForest(new FastForestRegressionTrainer.Options(){NumberOfTrees=9,NumberOfLeaves=19,FeatureFraction=0.9048345F,LabelColumnName=@"Power Generated",FeatureColumnName=@"Features"}));
 
             return pipeline;
         }

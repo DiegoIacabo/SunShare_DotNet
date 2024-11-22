@@ -12,9 +12,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunShare.Services", "SunShare.Services\SunShare.Services.csproj", "{37A8D4A8-C87F-4D29-AE38-2CBAF7AA9163}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8512C33B-58E3-499E-A3BE-2DACDFA76342}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Desktop\README.md = ..\..\..\Desktop\README.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1BC776E6-89D1-49B6-AC6A-F37248C14902}"
 EndProject
