@@ -44,3 +44,6 @@ Além disso, também foi desenvolvido um modelo de predição de geração de en
 ### Links dos Datasets utilizados
 - Credit Card Fraud Detection: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 - Solar power Generation: https://www.kaggle.com/datasets/vipulgote4/solar-power-generation
+
+## Vídeo Pitch
+- Link: https://www.youtube.com/watch?v=haIFBOvtYp0
