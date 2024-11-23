@@ -23,9 +23,14 @@ Dessa forma, o projeto tem como objetivo facilitar e aproximar a interação ent
 
     4. Verificar o acesso ao banco de dados no arquivo appsettings.json. No profile 'Development' coloque suas credenciais para conexão com Oracle;
 
-    5. Rodar a aplicação com o mode de execução 'https';
+    5. Na aba 'Ferramentas', abrir 'Console do Gerenciador de Pacotes' 
 
-    6. Testar as requisições através do Swagger no endereço: https://localhost:7295/swagger/index.html.
+    6. Selecionar projeto SunShare.Database e digitar 'update-database'
+
+    7. Rodar a aplicação com o mode de execução 'https';
+
+    8. Testar as requisições através do Swagger no endereço: https://localhost:7295/swagger/index.html.
+
 
 ## Tecnologias Utilizadas
 - API Web do ASP.NET Core (.NET 8.0)
